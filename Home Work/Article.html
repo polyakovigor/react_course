@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Article</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
+</head>
+<body>
+    <div id='content'></div>
+
+    <script type="text/babel">
+        var Article = React.createClass({
+            render: function() {
+                return (
+                    <div>
+                        <h1> {this.props.title} </h1>
+                        <h3> {this.props.author} </h3>
+                        <p> {this.props.body} </p>
+                    </div>
+                );
+            }
+        });
+
+        ReactDOM.render(
+                <div>
+                    <Article
+                            title="Dolores"
+                            author="Tyshawn Johns Sr."
+                            body="Depulso animi cunctatio amicitia adficio. Vester viduo qui despirmatio voluptas."
+                    />
+                    <Article
+                            title="Adipisci"
+                            author="Aditya Elton Douglas"
+                            body="Validus laudantium adopto ut agnitio venustas. Aer arcus odio esse."
+                    />
+                    <Article
+                            title="Nesciunt"
+                            author="Kaci"
+                            body="Labore voluptas sequi. Ratione nulla eaque quia molestiae fugit."
+                    />
+                </div>,
+            document.getElementById('content')
+        );
+    </script>
+
+</body>
+</html>
